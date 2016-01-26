@@ -21,6 +21,8 @@ This would reply with the JSON for the first 20 stars.
 
 Default: 50
 
+---
+
 `?page=<number>`
 
 This option will define what page you want back.
@@ -35,6 +37,8 @@ This would reply with the JSON for the stars 11-20.
 
 Default: 1
 
+---
+
 `?con=<string>`
 
 This option allows you to filter the stars by their constellation. 
@@ -43,6 +47,8 @@ Example: `http://telescope.io/stars?con=And`
 
 This would reply with the JSON for the first 50 stars in the Andromeda constellation.
 
+---
+
 `?mag=<number>`
 
 This option allows you to filter the stars by their magnitude.
@@ -50,6 +56,8 @@ This option allows you to filter the stars by their magnitude.
 Example: `http://telescope.io/stars?mag=3`
 
 This would reply with the JSON for the first 50 stars that contain a magnitude less than 3.
+
+---
 
 `?magparam=<string>`
 
@@ -63,6 +71,8 @@ This would reply with the JSON for the first 50 stars that contain a magnitude g
 
 Default: lt
 
+---
+
 `?search=<string>`
 
 This option will allow you to perform a text query on the database. 
@@ -72,5 +82,7 @@ This is really only useful to find stars using their Bayer designation.
 Example: `http://telescope.io/stars?search=18Alp%20Cas`
 
 This would reply with the JSON for 18Alp Cas and perhaps a few other, less relative matches.
+
+---
 
 
