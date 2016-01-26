@@ -2,7 +2,8 @@
 
 var express = require('express');
 var router = express.Router();
-var util = require('./util.js')
+var util = require('./util.js');
+var Stars = require('../models/star.js');
 var Constellations = require('../models/constellation.js');
 
 router.route('/constellations')
@@ -33,6 +34,7 @@ function get_constellation(req, res, con){
 			if(err_c||err_s) console.log('Error getting constellations: ', err_c||err_s);
 			var stars = util.arrToMap(star_data, 'id');
 			data.stars = stars;
+			data.connections = process_connections(data.connections);
 			res.json(data);
 		})
 	})
@@ -45,6 +47,7 @@ function get_all_constellation(req, res){
 			var stars = util.arrToMapMap(star_data, 'con', 'id');
 			data = data.map(function(val){
 				val.stars = stars[val.abbr];
+				val.connections = process_connections(val.connections);
 				return val;
 			})
 			var constellations = util.arrToMap(data, 'abbr');
@@ -61,11 +64,20 @@ function toggle_stars(req, res, stars, add){
 },
 function toggle_connection(req, res, con, connection, add){
 	console.log('Updating constellation\'s connections[add]...');
-	var update = {connections: {$pull: connection}};
-	if(!add) update = {connections: {$pull: connection}};
+	var connection_slug = connection[0]+'-'+connection[1];
+	var possible_connections = [connection_slug, connection[1]+'-'+connection[0]]
+	var update = {connections: {$push: connection_slug}};
+	if(!add) update = {$pull: {connections: {$in: possible_connections}}};
 	Constellations.update({con: con}, update, function(err, data){
 		if(err) console.log('Error updating constellation\'s connections...');
 	})
+}
+function process_connections(connections){
+	var arr = [];
+	for(var i; i < connections.length; i++){
+		arr.push(connections[i].split('-'));
+	}
+	return arr;
 }
 
 module.exports = router;
