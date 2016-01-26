@@ -57,4 +57,4 @@ Query | Example | Explanation | Default
 ----|----|----|----
 `con`|`?con=Tau`|Select a single constellation|*none*
 
-*(?con takes a constellation abbreviation, (here is a good list of them)[https://en.wikipedia.org/wiki/88_modern_constellations])*
+*(`?con` takes a constellation abbreviation, [here is a good list of them](https://en.wikipedia.org/wiki/88_modern_constellations))*
