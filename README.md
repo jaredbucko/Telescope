@@ -9,80 +9,15 @@ provides information for stars with a **magnitude of less than 7**.
 ### API
 -----
  `/stars`
+ 
+ Example Query: `/stars?limit=20&page=2&con=Ori&mag=3&magparam=gt`
 
 #### Options
-`?limit=<number>`
-
-This option will limit the number of stars in the response. 
-
-Example: `http://telescope.io/stars?limit=20`
-
-This would reply with the JSON for the first 20 stars.
-
-Default: 50
-
----
-
-`?page=<number>`
-
-This option will define what page you want back.
-
-Example: `http://telescope.io/stars?page=2`
-
-This would reply with the JSON for the stars 51-100.
-
-Example: `http://telescope.io/stars?limit=10&page=2`
-
-This would reply with the JSON for the stars 11-20.
-
-Default: 1
-
----
-
-`?con=<string>`
-
-This option allows you to filter the stars by their constellation. 
-
-Example: `http://telescope.io/stars?con=And`
-
-This would reply with the JSON for the first 50 stars in the Andromeda constellation.
-
----
-
-`?mag=<number>`
-
-This option allows you to filter the stars by their magnitude.
-
-Example: `http://telescope.io/stars?mag=3`
-
-This would reply with the JSON for the first 50 stars that contain a magnitude less than 3.
-
----
-
-`?magparam=<string>`
-
-This option will allow you to select how the magnitude option is interpreted.
-
-There are two options, lt and gt, *less than* and *greater than* respectively. 
-
-Example: `http://telescope.io/stars?mag=5&magparam=gt`
-
-This would reply with the JSON for the first 50 stars that contain a magnitude gretter than 5.
-
-Default: lt
-
----
-
-`?search=<string>`
-
-This option will allow you to perform a text query on the database. 
-
-This is really only useful to find stars using their Bayer designation.
-
-Example: `http://telescope.io/stars?search=18Alp%20Cas`
-
-This would reply with the JSON for 18Alp Cas and perhaps a few other, less relative matches.
-
----
-
-
+Query | Example | Explanation | Default
+----|----|----|----
+`limit`|`?limit=20`|Limit the number of stars in the response.| 50
+`page`|`?page=2`|Define what page you want back.|1
+`con`|`?con=Ori`|Filter the stars by their constellation.|All
+`mag`|`?mag=3`|Filter the stars by their magnitude.|All
+`magparam`|`?magparam=gt`|Changes how the mag query is interpreted.|lt
+`search`|`?search=18Alp%20Cas`|Performs a text search| *none*
