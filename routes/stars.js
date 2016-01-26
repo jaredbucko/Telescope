@@ -4,19 +4,17 @@ var express = require('express');
 var router = express.Router();
 var Stars = require('../models/star.js');
 
-var page_limit = 50;
-var magparam = 'lt';
-
 router.route('/stars')
 	.get(function(req, res){
 		req.query.page = req.query.page || 1;
+		req.query.limit = req.query.limit || 50;
 		var query = build_query(req.query);
 		Stars.count(query)
 			.exec(function(err, count){
 				if(err) console.log('Error counting stars...');
 				Stars.find(query)
 					.select('id proper mag ra dec hd dist bf con incon')
-					.limit(page_limit)
+					.limit(req.query.limit)
 					.skip((parseInt(req.query.page)-1)*page_limit)
 					.sort('mag')
 					.exec(function(err, stars){
