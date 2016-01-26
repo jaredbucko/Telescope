@@ -23,7 +23,7 @@ A `GET` request to this endpoint will return JSON defining stars. Here is an exa
 	    "dec": -16.716116, // The star's declination.
 	    "ra": 6.752481, // The star's right ascension.
 	    "dist": 2.6371, // The star's distance from Earth in light years.
-	    "incon": true, // True if star is in the star set representating its constellation.
+	    "incon": true, // True if star is in a symbolic constellation.
 	    "mag": -1.44, // The star's apparent visual magnitude.
 	    "proper": "Sirius", // The star's common name, if known.
 	},
@@ -49,6 +49,8 @@ Query | Example | Explanation | Default
 `search`|`?search=18Alp%20Cas`|Performs a text search.| *none*
 -----
 #### `/constellations`
+
+**(Now we're talking about symbolic constellations)**
 
 A `GET` request to this endpoint will return JSON defining constellations. Here is an example: 
 ```javascript
