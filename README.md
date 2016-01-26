@@ -15,7 +15,7 @@ A `GET` request to this endpoint will return JSON defining stars. Here is an exa
 {
 "count": 15588, // A count of stars that match this query in the database
 "stars": {
-	"32263": { 
+	32263: { 
 	    "id": 32263, // The star's ID in David's HYG database.
 	    "bf": "9Alp CMa", // The Bayer/Flamsteed designation, if known. 
 	    "hd": 48915, // The star's ID in the Henry Draper catalog, if known.
@@ -26,7 +26,8 @@ A `GET` request to this endpoint will return JSON defining stars. Here is an exa
 	    "incon": true, // True if star is in the star set representating its constellation.
 	    "mag": -1.44, // The star's apparent visual magnitude.
 	    "proper": "Sirius", // The star's common name, if known.
-	}
+	},
+	// ...
 }
 }
 ```
@@ -48,6 +49,31 @@ Query | Example | Explanation | Default
 `search`|`?search=18Alp%20Cas`|Performs a text search.| *none*
 -----
 #### `/constellations`
+
+A `GET` request to this endpoint will return JSON defining constellations. Here is an example: 
+```javascript
+{
+"Tau": { 
+	"abbr": "Tau", // The abbreviation of the constellation.
+	"name": "Taurus", // The full name of the constellation.
+	"meaning": "The Bull", // The meaning of the constellation's symbol.
+	"content": "Taurus is a ...", // A snippet of text that goes along with the constellation.
+	"stars": { // An object of all the stars in the constellation.
+		32263: { 
+		    // See the above description of star objects.
+		},
+		// ...
+	}, 
+	"connections": [ // An array of all the lines connecting stars in the constellation.
+		[32263, 32265], // The IDs of two connected stars.
+		[32265, 1322],
+		[1322, 53338],
+		// ...
+	]
+},
+// ...
+}
+```
  
 Example Query: `/constellations?con=Tau`
 *(This will return JSON for the constellation of Taurus)*
