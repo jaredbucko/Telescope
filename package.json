@@ -1,0 +1,19 @@
+{
+  "name": "telescope",
+  "version": "1.0.0",
+  "description": "An API for the sky.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nickroberts404/Telescope.git"
+  },
+  "author": "Nick Roberts",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nickroberts404/Telescope/issues"
+  },
+  "homepage": "https://github.com/nickroberts404/Telescope#readme"
+}
