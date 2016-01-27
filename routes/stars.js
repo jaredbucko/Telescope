@@ -15,7 +15,7 @@ router.route('/stars')
 				Stars.find(query)
 					.select('id proper mag ra dec hd dist bf con incon')
 					.limit(req.query.limit)
-					.skip((parseInt(req.query.page)-1)*page_limit)
+					.skip((parseInt(req.query.page)-1)*req.query.limit)
 					.sort('mag')
 					.exec(function(err, stars){
 						if(err) console.log('Error sending stars...');

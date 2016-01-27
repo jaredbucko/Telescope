@@ -41,7 +41,7 @@ module.exports = {
 			else map[arr[n][key]] = [arr[n]];
 		}
 		return map;
-	}
+	},
 	/*
 		Secondary key must be unique
 		var arr = [	
@@ -64,7 +64,11 @@ module.exports = {
 		var map = {};
 		for(n in arr){
 			if(map[arr[n][key]]) map[arr[n][key]][secondary_key] = arr[n];
-			else map[arr[n][key]] = {arr[n][secondary_key]: arr[n]};
+			else {
+				var obj = {};
+				obj[arr[n][secondary_key]] = arr[n];
+				map[arr[n][key]] = obj;
+			}
 		}
 		return map;
 	}

@@ -1,0 +1,442 @@
+[
+    {
+        "abbr": "And",
+        "meaning": "Daughter of Cassiopeia",
+        "name": "Andromeda"
+    },
+    {
+        "abbr": "Ant",
+        "meaning": "The Air Pump",
+        "name": "Antlia"
+    },
+    {
+        "abbr": "Aps",
+        "meaning": "Bird of Paradise",
+        "name": "Apus"
+    },
+    {
+        "abbr": "Aqr",
+        "meaning": "The Water-Bearer",
+        "name": "Aquarius"
+    },
+    {
+        "abbr": "Aql",
+        "meaning": "The Eagle",
+        "name": "Aquila"
+    },
+    {
+        "abbr": "Ara",
+        "meaning": "The Altar",
+        "name": "Ara"
+    },
+    {
+        "abbr": "Ari",
+        "meaning": "The Ram",
+        "name": "Aries"
+    },
+    {
+        "abbr": "Aur",
+        "meaning": "The Charioteer",
+        "name": "Auriga"
+    },
+    {
+        "abbr": "Boo",
+        "meaning": "The Herdsman",
+        "name": "Bo\u00f6tes"
+    },
+    {
+        "abbr": "Cae",
+        "meaning": "The Chisel",
+        "name": "Caelum"
+    },
+    {
+        "abbr": "Cam",
+        "meaning": "The Giraffe",
+        "name": "Camelopardalis"
+    },
+    {
+        "abbr": "Cnc",
+        "meaning": "The Crab",
+        "name": "Cancer"
+    },
+    {
+        "abbr": "CVn",
+        "meaning": "The Hunting Dogs",
+        "name": "Canes Venatici"
+    },
+    {
+        "abbr": "CMa",
+        "meaning": "The Big Dog",
+        "name": "Canis Major"
+    },
+    {
+        "abbr": "CMi",
+        "meaning": "The Little Dog",
+        "name": "Canis Minor"
+    },
+    {
+        "abbr": "Cap",
+        "meaning": "The Goat",
+        "name": "Capricornus"
+    },
+    {
+        "abbr": "Car",
+        "meaning": "The Keel (of Argo)",
+        "name": "Carina"
+    },
+    {
+        "abbr": "Cas",
+        "meaning": "The Queen",
+        "name": "Cassiopeia"
+    },
+    {
+        "abbr": "Cen",
+        "meaning": "The Centaur",
+        "name": "Centaurus"
+    },
+    {
+        "abbr": "Cep",
+        "meaning": "The King",
+        "name": "Cepheus"
+    },
+    {
+        "abbr": "Cet",
+        "meaning": "The Whale",
+        "name": "Cetus"
+    },
+    {
+        "abbr": "Cha",
+        "meaning": "The Chameleon",
+        "name": "Chamaeleon"
+    },
+    {
+        "abbr": "Cir",
+        "meaning": "The Compasses",
+        "name": "Circinus"
+    },
+    {
+        "abbr": "Col",
+        "meaning": "The Dove",
+        "name": "Columba"
+    },
+    {
+        "abbr": "Com",
+        "meaning": "Berenice's Hair",
+        "name": "Coma Berenices"
+    },
+    {
+        "abbr": "CrA",
+        "meaning": "The Southern Crown",
+        "name": "Corona Australis"
+    },
+    {
+        "abbr": "CrB",
+        "meaning": "The Northern Crown",
+        "name": "Corona Borealis"
+    },
+    {
+        "abbr": "Crv",
+        "meaning": "The Crow",
+        "name": "Corvus"
+    },
+    {
+        "abbr": "Crt",
+        "meaning": "The Cup",
+        "name": "Crater"
+    },
+    {
+        "abbr": "Cru",
+        "meaning": "The Cross",
+        "name": "Crux"
+    },
+    {
+        "abbr": "Cyg",
+        "meaning": "The Swan",
+        "name": "Cygnus"
+    },
+    {
+        "abbr": "Del",
+        "meaning": "The Dolphin",
+        "name": "Delphinus"
+    },
+    {
+        "abbr": "Dor",
+        "meaning": "The Swordfish",
+        "name": "Dorado"
+    },
+    {
+        "abbr": "Dra",
+        "meaning": "The Dragon",
+        "name": "Draco"
+    },
+    {
+        "abbr": "Equ",
+        "meaning": "The Little Horse",
+        "name": "Equuleus"
+    },
+    {
+        "abbr": "Eri",
+        "meaning": "The River",
+        "name": "Eridanus"
+    },
+    {
+        "abbr": "For",
+        "meaning": "The Furnace",
+        "name": "Fornax"
+    },
+    {
+        "abbr": "Gem",
+        "meaning": "The Twins",
+        "name": "Gemini"
+    },
+    {
+        "abbr": "Gru",
+        "meaning": "The Crane (bird)",
+        "name": "Grus"
+    },
+    {
+        "abbr": "Her",
+        "meaning": "The Son of Zeus",
+        "name": "Hercules"
+    },
+    {
+        "abbr": "Hor",
+        "meaning": "The Clock",
+        "name": "Horologium"
+    },
+    {
+        "abbr": "Hya",
+        "meaning": "The Water Snake (female)",
+        "name": "Hydra"
+    },
+    {
+        "abbr": "Hyi",
+        "meaning": "The Water Snake (male)",
+        "name": "Hydrus"
+    },
+    {
+        "abbr": "Ind",
+        "meaning": "The Indian (American)",
+        "name": "Indus"
+    },
+    {
+        "abbr": "Lac",
+        "meaning": "The Lizard",
+        "name": "Lacerta"
+    },
+    {
+        "abbr": "Leo",
+        "meaning": "The Lion",
+        "name": "Leo"
+    },
+    {
+        "abbr": "LMi",
+        "meaning": "The Little Lion",
+        "name": "Leo Minor"
+    },
+    {
+        "abbr": "Lep",
+        "meaning": "The Hare",
+        "name": "Lepus"
+    },
+    {
+        "abbr": "Lib",
+        "meaning": "The Balance",
+        "name": "Libra"
+    },
+    {
+        "abbr": "Lup",
+        "meaning": "The Wolf",
+        "name": "Lupus"
+    },
+    {
+        "abbr": "Lyn",
+        "meaning": "The Lynx",
+        "name": "Lynx"
+    },
+    {
+        "abbr": "Lyr",
+        "meaning": "The Lyre",
+        "name": "Lyra"
+    },
+    {
+        "abbr": "Men",
+        "meaning": "The Table",
+        "name": "Mensa"
+    },
+    {
+        "abbr": "Mic",
+        "meaning": "The Microscope",
+        "name": "Microscopium"
+    },
+    {
+        "abbr": "Mon",
+        "meaning": "The Unicorn",
+        "name": "Monoceros"
+    },
+    {
+        "abbr": "Mus",
+        "meaning": "The Fly",
+        "name": "Musca"
+    },
+    {
+        "abbr": "Nor",
+        "meaning": "The Square",
+        "name": "Norma"
+    },
+    {
+        "abbr": "Oct",
+        "meaning": "The Octant",
+        "name": "Octans"
+    },
+    {
+        "abbr": "Oph",
+        "meaning": "The Serpent-Bearer",
+        "name": "Ophiuchus"
+    },
+    {
+        "abbr": "Ori",
+        "meaning": "The Hunter",
+        "name": "Orion"
+    },
+    {
+        "abbr": "Pav",
+        "meaning": "The Peacock",
+        "name": "Pavo"
+    },
+    {
+        "abbr": "Peg",
+        "meaning": "The Winged Horse",
+        "name": "Pegasus"
+    },
+    {
+        "abbr": "Per",
+        "meaning": "Rescuer of Andromeda",
+        "name": "Perseus"
+    },
+    {
+        "abbr": "Phe",
+        "meaning": "The Phoenix",
+        "name": "Phoenix"
+    },
+    {
+        "abbr": "Pic",
+        "meaning": "The Painter",
+        "name": "Pictor"
+    },
+    {
+        "abbr": "Psc",
+        "meaning": "The Fishes",
+        "name": "Pisces"
+    },
+    {
+        "abbr": "PsA",
+        "meaning": "The Southern Fish",
+        "name": "Piscis Austrinus"
+    },
+    {
+        "abbr": "Pup",
+        "meaning": "The Stern (of Argo)",
+        "name": "Puppis"
+    },
+    {
+        "abbr": "Pyx",
+        "meaning": "The Compass",
+        "name": "Pyxis"
+    },
+    {
+        "abbr": "Ret",
+        "meaning": "The Reticle",
+        "name": "Reticulum"
+    },
+    {
+        "abbr": "Sge",
+        "meaning": "The Arrow",
+        "name": "Sagitta"
+    },
+    {
+        "abbr": "Sgr",
+        "meaning": "The Archer",
+        "name": "Sagittarius"
+    },
+    {
+        "abbr": "Sco",
+        "meaning": "The Scorpion",
+        "name": "Scorpius"
+    },
+    {
+        "abbr": "Scl",
+        "meaning": "The Sculptor",
+        "name": "Sculptor"
+    },
+    {
+        "abbr": "Sct",
+        "meaning": "The Shield",
+        "name": "Scutum"
+    },
+    {
+        "abbr": "Ser",
+        "meaning": "The Serpent",
+        "name": "Serpens"
+    },
+    {
+        "abbr": "Sex",
+        "meaning": "The Sextant",
+        "name": "Sextans"
+    },
+    {
+        "abbr": "Tau",
+        "meaning": "The Bull",
+        "name": "Taurus"
+    },
+    {
+        "abbr": "Tel",
+        "meaning": "The Telescope",
+        "name": "Telescopium"
+    },
+    {
+        "abbr": "Tri",
+        "meaning": "The Triangle",
+        "name": "Triangulum"
+    },
+    {
+        "abbr": "TrA",
+        "meaning": "The Southern Triangle",
+        "name": "Triangulum Australe"
+    },
+    {
+        "abbr": "Tuc",
+        "meaning": "The Toucan",
+        "name": "Tucana"
+    },
+    {
+        "abbr": "UMa",
+        "meaning": "The Great Bear",
+        "name": "Ursa Major"
+    },
+    {
+        "abbr": "UMi",
+        "meaning": "The Little Bear",
+        "name": "Ursa Minor"
+    },
+    {
+        "abbr": "Vel",
+        "meaning": "The Sails (of Argo)",
+        "name": "Vela"
+    },
+    {
+        "abbr": "Vir",
+        "meaning": "The Maiden",
+        "name": "Virgo"
+    },
+    {
+        "abbr": "Vol",
+        "meaning": "The Flying Fish",
+        "name": "Volans"
+    },
+    {
+        "abbr": "Vul",
+        "meaning": "The Fox",
+        "name": "Vulpecula"
+    }
+]
