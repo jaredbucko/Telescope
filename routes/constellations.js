@@ -35,20 +35,18 @@ function get_constellation(req, res, con){
 			var stars = util.arrToMap(star_data, 'id');
 			var constellation = data[0];
 			constellation.stars = stars;
-			constellation.connections = process_connections(constellation.connections);
 			res.json(constellation);
 		})
 	})
 }
 function get_all_constellations(req, res){
-	console.log("Getting constellations...");
+	console.log("Getting all constellations...");
 	Constellations.find({}, function(err_c, data){
 		Stars.find({incon: true}, function(err_s, star_data){
 			if(err_c||err_s) console.log('Error getting constellations: ', err_c||err_s);
 			var stars = util.arrToMapMap(star_data, 'con', 'id');
 			data = data.map(function(val){
 				val.stars = stars[val.abbr];
-				val.connections = process_connections(val.connections);
 				return val;
 			})
 			var constellations = util.arrToMap(data, 'abbr');
@@ -61,6 +59,8 @@ function toggle_stars(req, res, stars, add){
 	console.log('Updating constellation\'s stars...');
 	Stars.update({id: {$in: stars}}, {incon: add}, {multi: true}, function(err, data){
 		if(err) console.log('Error updating constellation\'s stars: ', err);
+		else console.log('Stars have been updated');
+		res.json(data);
 	});
 }
 
@@ -68,19 +68,13 @@ function toggle_connection(req, res, con, connection, add){
 	console.log('Updating constellation\'s connections...');
 	var connection_slug = connection[0]+'-'+connection[1];
 	var possible_connections = [connection_slug, connection[1]+'-'+connection[0]]
-	var update = {connections: {$push: connection_slug}};
+	var update = {$push: {connections: connection_slug}};
 	if(!add) update = {$pull: {connections: {$in: possible_connections}}};
-	Constellations.update({con: con}, update, function(err, data){
+	Constellations.update({abbr: con}, update, function(err, data){
 		if(err) console.log('Error updating constellation\'s connections: ', err);
+		else console.log('Connections have been updated...');
+		res.json(data);
 	})
-}
-
-function process_connections(connections){
-	var arr = [];
-	for(var i; i < connections.length; i++){
-		arr.push(connections[i].split('-'));
-	}
-	return arr;
 }
 
 module.exports = router;
