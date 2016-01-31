@@ -22,8 +22,9 @@ router.route('/constellations')
 	.put(function(req, res){
 		var bod = req.body;
 		console.log('Updataing constellation...')
+		console.log(req.body);
 		if(bod.stars) toggle_stars(req, res, bod.stars, bod.add_stars);
-		else if(bod.connection && req.query.con) toggle_connection(req, res, req.query.con, bod.connection, bod.add_connection);
+		else if(bod.connection && req.query.con) toggle_connection(req, res, req.query.con, bod.connection, bod.addConnection);
 		else console.log('Error: PUT request with no useful content...');
 	})
 

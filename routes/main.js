@@ -11,6 +11,11 @@ mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://localhost:27017/telescop
 router.get('/', function(req, res){
 	res.end('Welcome to Telescope');
 })
+router.options('*', function(req, res){
+	res.header("Access-Control-Allow-Origin", "*");
+	res.header("Access-Control-Allow-Methods", "GET,POST,PUT,DELETE,OPTIONS");
+  	res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+})
 
 router.use(stars);
 router.use(constellations);

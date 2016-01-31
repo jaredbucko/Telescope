@@ -44,7 +44,7 @@ router.route('/stars')
 function build_query(opt){
 	var query = {};
 	if(opt.con) query.con = opt.con;
-	if(opt.mag) query.mag = opt.magparam == 'lt' ? {$lt: opt.mag} : {$gt: opt.mag}
+	if(opt.mag) query.mag = opt.magparam == 'gt' ? {$gt: opt.mag} : {$lt: opt.mag}
 	if(opt.search) query.$text = {$search: opt.search}
 	return query;
 }
