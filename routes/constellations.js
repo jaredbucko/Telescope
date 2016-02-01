@@ -33,10 +33,9 @@ function get_constellation(req, res, con){
 	Constellations.find({abbr: con}, function(err_c, data){
 		Stars.find({con: con, incon: true}, function(err_s, star_data){
 			if(err_c||err_s) console.log('Error getting constellations: ', err_c||err_s);
-			var stars = util.arrToMap(star_data, 'id');
 			// Using .toObject because you can't add properties to a Mongoose object.
 			var constellation = data[0].toObject();
-			constellation.stars = stars;
+			constellation.stars = star_data;
 			res.json(constellation);
 		})
 	})
@@ -46,7 +45,7 @@ function get_all_constellations(req, res){
 	Constellations.find({}, function(err_c, con_data){
 		Stars.find({incon: true}, function(err_s, star_data){
 			if(err_c||err_s) console.log('Error getting constellations: ', err_c||err_s);
-			var stars = util.arrToMapMap(star_data, 'con', 'id');
+			var stars = util.arrToArrMap(star_data, 'con');
 			con_data = con_data.map(function(val){
 				// Using .toObject because you can't add properties to a Mongoose object.
 				val = val.toObject();
