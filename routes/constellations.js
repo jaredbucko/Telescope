@@ -1,5 +1,5 @@
 // routes/constellations.js
-
+'use strict'
 var express = require('express');
 var router = express.Router();
 var util = require('./util.js');
@@ -34,7 +34,8 @@ function get_constellation(req, res, con){
 		Stars.find({con: con, incon: true}, function(err_s, star_data){
 			if(err_c||err_s) console.log('Error getting constellations: ', err_c||err_s);
 			var stars = util.arrToMap(star_data, 'id');
-			var constellation = data[0];
+			// Using .toObject because you can't add properties to a Mongoose object.
+			var constellation = data[0].toObject();
 			constellation.stars = stars;
 			res.json(constellation);
 		})
@@ -42,16 +43,18 @@ function get_constellation(req, res, con){
 }
 function get_all_constellations(req, res){
 	console.log("Getting all constellations...");
-	Constellations.find({}, function(err_c, data){
+	Constellations.find({}, function(err_c, con_data){
 		Stars.find({incon: true}, function(err_s, star_data){
 			if(err_c||err_s) console.log('Error getting constellations: ', err_c||err_s);
 			var stars = util.arrToMapMap(star_data, 'con', 'id');
-			data = data.map(function(val){
-				val.stars = stars[val.abbr];
+			con_data = con_data.map(function(val){
+				// Using .toObject because you can't add properties to a Mongoose object.
+				val = val.toObject();
+				val.stars = stars[val.abbr] || [];
 				return val;
 			})
-			var constellations = util.arrToMap(data, 'abbr');
-			res.json(constellations);
+			con_data = util.arrToMap(con_data, 'abbr');
+			res.json(con_data);
 		})
 	})
 }
